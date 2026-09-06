@@ -9,6 +9,7 @@ import Statistics from "@/components/Statistics";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import WhatsAppFAB from "@/components/WhatsAppFAB";
+import ChatBot from "@/components/chatbot/ChatBot";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppFAB />
+      <ChatBot />
     </>
   );
 }
