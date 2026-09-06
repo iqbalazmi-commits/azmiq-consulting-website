@@ -8,10 +8,10 @@ export type KnowledgeEntry = {
 export const KNOWLEDGE: KnowledgeEntry[] = [
   {
     id: "greeting",
-    keywords: ["hi", "hello", "hey", "good morning", "good afternoon"],
+    keywords: ["hi", "hello", "hey", "good morning", "good afternoon", "good evening"],
     question: "Hi there",
     answer:
-      "Hi there! 👋 I'm the Azmiq Assistant. Ask me about our services, pricing, locations, or how to get in touch — I'm happy to help.",
+      "Hi there! 👋 I'm the Azmiq Assistant. Ask me about our services, pricing, locations, or how to get in touch — or pick a topic below.",
   },
   {
     id: "services",
@@ -24,10 +24,53 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "provide",
       "do you do",
       "specialize",
+      "solutions",
     ],
     question: "What services do you offer?",
     answer:
-      "We provide end-to-end SAP consulting across six core areas:\n\n• SAP S/4HANA implementation\n• SAP FICO (financial accounting & controlling)\n• SAP MM/SD (procurement, sales & distribution)\n• SAP SuccessFactors (HR & workforce management)\n• SAP EWM (warehouse management)\n• SAP BTP (integration, automation & AI)\n\nWe also offer managed services and staff augmentation for ongoing support.",
+      "We offer four core service lines:\n\n• SAP Implementation — end-to-end rollout of new SAP systems\n• SAP Migration — moving legacy systems onto modern SAP platforms\n• Managed Services — ongoing support and optimization\n• Staff Augmentation — certified SAP consultants embedded in your team\n\nOn the technical side, we cover S/4HANA, FICO, MM/SD, SuccessFactors, EWM, and BTP. Ask me about any of these specifically for more detail.",
+  },
+  {
+    id: "module_s4hana",
+    keywords: ["s/4hana", "s4hana", "s/4 hana", "hana", "erp"],
+    question: "What is SAP S/4HANA?",
+    answer:
+      "SAP S/4HANA is our next-generation ERP suite — it powers intelligent, real-time enterprise operations, replacing legacy ERP systems with a modern, in-memory platform. We handle full S/4HANA implementations and migrations from older SAP or non-SAP systems.",
+  },
+  {
+    id: "module_fico",
+    keywords: ["fico", "financial accounting", "controlling", "finance module"],
+    question: "What is SAP FICO?",
+    answer:
+      "SAP FICO covers financial accounting and controlling — giving you real-time visibility into enterprise finances, from general ledger and accounts payable/receivable to cost center accounting and profitability analysis.",
+  },
+  {
+    id: "module_mmsd",
+    keywords: ["mm/sd", "mm sd", "procurement", "materials management", "sales and distribution", "sales & distribution"],
+    question: "What is SAP MM/SD?",
+    answer:
+      "SAP MM/SD covers end-to-end procurement, materials management, and sales & distribution — managing everything from purchasing and inventory to order processing and delivery.",
+  },
+  {
+    id: "module_successfactors",
+    keywords: ["successfactors", "hcm", "hr module", "human resources", "payroll", "workforce"],
+    question: "What is SAP SuccessFactors?",
+    answer:
+      "SAP SuccessFactors is our cloud HCM (Human Capital Management) suite — covering talent management, payroll, and workforce analytics for managing your people end-to-end.",
+  },
+  {
+    id: "module_ewm",
+    keywords: ["ewm", "warehouse management", "warehouse", "logistics"],
+    question: "What is SAP EWM?",
+    answer:
+      "SAP EWM (Extended Warehouse Management) handles complex, high-volume logistics networks — optimizing warehouse operations, inventory tracking, and fulfillment.",
+  },
+  {
+    id: "module_btp",
+    keywords: ["btp", "business technology platform", "integration platform", "automation platform"],
+    question: "What is SAP BTP?",
+    answer:
+      "SAP BTP (Business Technology Platform) is used for integration, automation, and AI-driven extensions — connecting your SAP landscape with other systems and building custom extensions on top of it.",
   },
   {
     id: "pricing",
@@ -60,32 +103,58 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "where",
       "based",
       "address",
+      "addresses",
       "headquarters",
       "hq",
-      "riyadh",
-      "london",
-      "mumbai",
     ],
     question: "Where are you located?",
     answer:
-      "We have three offices:\n\n• Mumbai, India — our original HQ, since 2015\n• London, UK — Global HQ, since 2024\n• Riyadh, Saudi Arabia — Middle East HQ, since 2024\n\nExact addresses and phone numbers are in the footer and hero section of this page.",
+      "We have three offices:\n\n• London, UK — Unit 19, 1–13 Adler Street, London E1 1EG, United Kingdom — +44 7741 856782\n• Mumbai, India — World Trade Centre, Tower 1, Arcade, Cuffe Parade, Colaba, Mumbai 400005, India — +91 9987567602\n• Riyadh, Saudi Arabia — +966 54 249 6135\n\nLondon is our Global HQ, Mumbai our original HQ (since 2015), and Riyadh our Middle East HQ.",
+  },
+  {
+    id: "location_london",
+    keywords: ["london", "uk office", "united kingdom", "britain"],
+    question: "Tell me about your London office",
+    answer:
+      "Our London office is our Global HQ, established in 2024, at Unit 19, 1–13 Adler Street, London E1 1EG, United Kingdom. Phone: +44 7741 856782.",
+  },
+  {
+    id: "location_mumbai",
+    keywords: ["mumbai", "india office", "bombay"],
+    question: "Tell me about your Mumbai office",
+    answer:
+      "Mumbai is where Azmiq began, back in 2015. Our office is at World Trade Centre, Tower 1, Arcade, Cuffe Parade, Colaba, Mumbai 400005, India. Phone: +91 9987567602.",
+  },
+  {
+    id: "location_riyadh",
+    keywords: ["riyadh", "saudi", "saudi arabia", "middle east office"],
+    question: "Tell me about your Riyadh office",
+    answer:
+      "Riyadh is our Middle East HQ, established in 2024, extending our SAP delivery capability across the region. Phone: +966 54 249 6135.",
   },
   {
     id: "about",
     keywords: [
-      "about",
       "history",
       "founded",
       "started",
-      "when",
-      "company",
+      "when founded",
+      "when was",
+      "your company",
       "who are you",
       "story",
       "background",
     ],
     question: "Tell me about your company",
     answer:
-      "Azmiq Consulting started in Mumbai, India in 2015, delivering hands-on SAP expertise to growing enterprises. In 2024 we opened our Global HQ in London and established a Middle East presence in Riyadh — bringing that same depth of expertise to clients across three continents.",
+      "Azmiq Consulting started in Mumbai, India in 2015, delivering hands-on SAP expertise to growing enterprises. Nearly a decade later, in 2024, we opened our Global HQ in London and established a Middle East presence in Riyadh — bringing that same depth of expertise to clients across three continents.",
+  },
+  {
+    id: "office_culture",
+    keywords: ["workspace", "workspaces", "culture", "team", "work environment", "what's it like"],
+    question: "What are your offices like?",
+    answer:
+      "Our offices are modern, collaborative workspaces built for focused, high-impact delivery — with certified consultants working across three continents, giving clients round-the-clock access to SAP expertise wherever their business operates.",
   },
   {
     id: "contact",
@@ -102,7 +171,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
     ],
     question: "How can I contact you?",
     answer:
-      "You can reach us anytime:\n\n• Email: support@azmiqconsulting.com\n• WhatsApp: use the chat button in the corner of this page\n• Book a free consultation directly from the menu\n\nWe typically respond within one business day.",
+      "You can reach us anytime:\n\n• Email: support@azmiqconsulting.com\n• WhatsApp: use the chat button in the corner of this page\n• LinkedIn: linkedin.com/company/azmiqconsulting\n• Book a free consultation directly from the menu\n\nWe typically respond within one business day.",
   },
   {
     id: "process",
@@ -116,7 +185,7 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
     ],
     question: "What's your process?",
     answer:
-      "Our process has four steps:\n\n1. Discover — we assess your current landscape, goals, and constraints\n2. Design — our architects craft a tailored SAP roadmap\n3. Deploy — certified consultants implement, integrate, and test\n4. Sustain — ongoing support, optimization, and managed services",
+      "Our process has four steps:\n\n1. Discover — we assess your current landscape, business goals, and technical constraints\n2. Design — our architects craft a tailored SAP roadmap aligned to your operating model\n3. Deploy — certified consultants implement, integrate, and rigorously test each module\n4. Sustain — ongoing support, optimization, and managed services keep you ahead",
   },
   {
     id: "industries",
@@ -176,10 +245,19 @@ export const KNOWLEDGE: KnowledgeEntry[] = [
       "delivered",
       "how many",
       "proven",
+      "statistics",
+      "numbers",
     ],
     question: "What's your track record?",
     answer:
-      "We've delivered 20+ SAP projects since 2015, with a 98% client retention rate, 96% on-time delivery, and consultants working across three continents.",
+      "Some numbers that tell our story:\n\n• 20+ projects delivered\n• Founded 2015\n• 40+ certified consultants\n• 98% client retention\n• 96% on-time delivery\n• 92% client satisfaction\n• 88% cost efficiency",
+  },
+  {
+    id: "global_presence",
+    keywords: ["global presence", "worldwide", "international", "continents", "global reach"],
+    question: "What's your global presence?",
+    answer:
+      "We operate from 3 strategic headquarters — London (Global HQ), Mumbai (original HQ, since 2015), and Riyadh (Middle East HQ) — giving us worldwide delivery capability across three continents.",
   },
 ];
 
@@ -209,7 +287,10 @@ export function findBestMatch(query: string): KnowledgeEntry | null {
         score += kw.split(" ").length;
       }
     }
-    if (score > 0 && (!best || score > best.score)) {
+    // On a tie, prefer the later entry — more specific topics (e.g. a single
+    // SAP module or office) are deliberately listed after their general
+    // counterpart (e.g. "services" or "locations") in KNOWLEDGE.
+    if (score > 0 && (!best || score >= best.score)) {
       best = { entry, score };
     }
   }
